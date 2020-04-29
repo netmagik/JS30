@@ -8,5 +8,9 @@
 ```javascript
 (new Date()).getFullYear();
 ```
-
+* Delete item in an array
+```javascript
+comments.splice(3, 1);
+```
+starting at index 3, remove 1 item
 
