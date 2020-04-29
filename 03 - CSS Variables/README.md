@@ -1,4 +1,5 @@
 <h1>CSS Variables</h1>
+<img width="1119" alt="CSS Variables-Input Types" src="https://user-images.githubusercontent.com/3833560/80553879-607c9380-8999-11ea-9d8c-0771790f69b3.png">
 <ul>
 <li>Input types:<br />
 
