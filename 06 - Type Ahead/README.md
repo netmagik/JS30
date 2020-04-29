@@ -1,4 +1,4 @@
-<h1>Type Ahead</h1>
+<h1>Type Ahead - Search for City/State & Highlight found strings in dropdown</h1>
 
 Tilted CSS row:
 
