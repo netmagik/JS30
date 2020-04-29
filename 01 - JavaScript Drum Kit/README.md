@@ -1,5 +1,7 @@
 <h1>Piano with keyboard keys</h1>
 
+<kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> <kbd>E</kbd> <kbd>F</kbd> <kbd>G</kbd> <kbd>H</kbd> <kbd>I</kbd>
+
 <h2>Helpful notes:</h2>
 
 <ul>
