@@ -7,6 +7,76 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
+  const canvas = document.querySelector('#draw');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  //set color of the stroke
+  ctx.strokeStyle = '#BADA55';
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  //Set Line Width (how thick is the stroke)
+  ctx.lineWidth = 100;
+  //Blend colors
+  ctx.globalCompositeOperation = 'multiply';
+
+  //dummy variables
+  //flag if someone is actually drawing on canvas
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+  let hue = 0;
+  let direction = 0;
+
+  //function when I move mouse on top of canvas
+  function draw(e) {
+    if(!isDrawing) return; //stop the function from running when they are not moused
+
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+    //start drawing
+    ctx.beginPath();
+    //start from
+    ctx.moveTo(lastX, lastY);
+    //go to
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    //destructuring an Array
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+    //increment hue and get different colors:
+    hue++;
+    if(hue >= 360) {
+      hue = 0;
+    }
+  }
+
+//increment line width every time you draw
+if(ctx.lineWidth >= 500 || ctx.lineWidth <= 1) {
+  direction = !direction;
+}
+
+if(direction) {
+  ctx.lineWidth++;
+ } else {
+  ctx.lineWidth--;
+
+  }
+
+
+canvas.addEventListener('mousedown', (e) => {
+  isDrawing = true;
+  //update last X and last Y before putting the mouse down
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+
+});
+
+
+canvas.addEventListener('mousemove', draw);
+
+canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseout', () => isDrawing = false);
+
+
 </script>
 
 <style>
