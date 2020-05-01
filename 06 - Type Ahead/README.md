@@ -29,3 +29,5 @@ The % in linear gradient means that that color should reach its full hue by that
 
 * We used .filter to apply a function to every single element in the array
 
+<img width="664" alt="Screenshot 2020-04-30 20 23 31" src="https://user-images.githubusercontent.com/3833560/80771169-8c765100-8b20-11ea-97b2-fb9ee2f28df7.png">
+
