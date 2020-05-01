@@ -96,6 +96,38 @@
   </div>
 
 <script>
+const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+let lastChecked;
+
+function handlecheck(e) {
+//check if SHIFT key was down
+//And check if they are checking it (not unchecking)
+let inBetween = false;
+if(e.shiftKey && this.checked) {
+  //do what you want
+  //loop over every checkbox
+  checkboxes.forEach(checkbox => {
+    if(checkbox === this || checkbox === lastChecked) {
+      inBetween = !inBetween;
+    }
+    //if the variable is true, check the boxes
+    if(inBetween) {
+      checkbox.checked = true;    }
+  });
+
+}
+
+
+  lastChecked = this;
+}
+
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handlecheck));
+
+
+
+
+
 </script>
 </body>
 </html>
