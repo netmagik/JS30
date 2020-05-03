@@ -10,3 +10,7 @@ window.scrollY + window.innerHeight
 
 * Create variables first before the IF statement. 
 * Console.log the variables to understand
+
+
+
+<img width="830" alt="Screenshot 2020-05-03 19 48 58" src="https://user-images.githubusercontent.com/3833560/80929084-41a24680-8d77-11ea-9359-4e3f03c62c46.png">
