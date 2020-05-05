@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(http://lorempixel.com/800/600/nature/2);
+  background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(nature.jpeg);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -65,7 +65,7 @@ h2 {
 }
 
 .plates input:checked + label:before {
-  content: '🌮';
+  content: '💩';
 }
 
 .add-items {
