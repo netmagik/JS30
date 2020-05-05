@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(http://lorempixel.com/800/600/nature/2);
   background-size: cover;
   min-height: 100vh;
   display: flex;
