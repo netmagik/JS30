@@ -1,4 +1,4 @@
-<h1>Local Storage</h1>
+<h1>Local Storage and Event Delegation (Checklist)</h1>
 
 If you have multiple forms on the page, select the field you need by using <b>this.querySelector</b> instead of <b>document.querySelector</b>
 <br />Example:
@@ -28,5 +28,4 @@ const text = (this.querySelector('[name=item]').value);
   if(e.target.matches('input')) return; //skip this unles it's an input
 ```
 
-
-
+<img width="485" alt="Screenshot 2020-05-05 15 41 38" src="https://user-images.githubusercontent.com/3833560/81108685-045cc680-8ee7-11ea-8128-201dad431442.png">
