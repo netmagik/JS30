@@ -21,3 +21,5 @@ list-style: inside square;
 ```javascript
 document.querySelector('#bands').innerHTML = sortedBands.map(band => `<li>${band}</li>`).join('');
 ```
+
+<img width="610" alt="Screenshot 2020-05-06 10 55 58" src="https://user-images.githubusercontent.com/3833560/81192426-36723500-8f88-11ea-8613-b23a18789251.png">
