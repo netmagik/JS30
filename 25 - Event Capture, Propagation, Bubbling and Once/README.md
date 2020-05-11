@@ -30,3 +30,4 @@ button.addEventListener('click', () => {
   once: true
 });
 ```
+<img width="472" alt="Screenshot 2020-05-11 17 42 34" src="https://user-images.githubusercontent.com/3833560/81615085-08895800-93af-11ea-8b45-2beff1d953ac.png">
