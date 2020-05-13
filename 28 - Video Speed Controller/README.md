@@ -24,3 +24,6 @@ We used a formula to calculate playbackRate
 
 ```javascript
 const playbackRate = percent * (max - min) + min;
+```
+
+<img width="613" alt="Screenshot 2020-05-13 17 08 56" src="https://user-images.githubusercontent.com/3833560/81865935-8038bd80-953c-11ea-9a9e-76bbb35de7c5.png">
