@@ -42,4 +42,4 @@ startX = e.pageX - slider.offsetLeft
 ```javascript
 console.log({x, startX});
 ```
-
+<img width="1075" alt="Screenshot 2020-05-13 15 45 55" src="https://user-images.githubusercontent.com/3833560/81857875-ddc70d00-9530-11ea-9eaa-5a5402bbca6e.png">
