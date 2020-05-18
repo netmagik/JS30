@@ -8,3 +8,4 @@ function randTime(min, max) {
 }  
 ```
 
+* Click event has .isTrusted property, which tells the browser if the user clicked it or it was a fake click through JavaScript
