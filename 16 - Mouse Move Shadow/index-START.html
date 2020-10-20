@@ -37,15 +37,19 @@
 <script>
   const hero = document.querySelector('.hero');
   const text = hero.querySelector('h1');
-  const walk = 500; //100px
+  const walk = 100; //100px
 
   function shadow(e) {
     const width = hero.offsetWidth;
     const height = hero.offsetHeight;
 
-    let { offsetX: x, offsetY: y } = e;
+    let x = e.offsetX;
+    let y = e.offsetY;
 
-
+    // If hovering over h1 instead of .hero(which is the in the Event Listiner)
+    // Add the offset value
+    // this = .hero
+    // e.target = h1
     if(this !== e.target) {
       x = x + e.target.offsetLeft;
       y = y + e.target.offsetTop;

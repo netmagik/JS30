@@ -24,16 +24,23 @@
       <input type="text" name="item" placeholder="Item Name" required>
       <input type="submit" value="+ Add Item">
     </form>
+    <form class="act-items">
+      <button type="button" class="btn" data-clear="clearItems">Clear</button>
+      <button type="button" class="btn" data-checkall="checkAll">✔️ All</button>
+      <button type="button" class="btn" data-uncheckall="uncheckAll">❌ All</button>
+    </form>
   </div>
 
 <script>
   const addItems = document.querySelector('.add-items');
+  // const actItems = documnet.querySelector('.act-items');
   const itemsList = document.querySelector('.plates');
+  const allButtons = document.querySelectorAll('button');
   const items = JSON.parse(localStorage.getItem('items')) || [];
 
 function addItem(e) {
   e.preventDefault();
-  const text = (this.querySelector('[name=item')).value;
+  const text = (this.querySelector('[name=item]')).value;
   const item = {
     text,
     done: false
@@ -45,6 +52,7 @@ function addItem(e) {
     this.reset();
   }
 
+  // Take care of Plates Array
 function populateList(plates = [], platesList) {
   platesList.innerHTML = plates.map((plate, i) => {
     return `
@@ -57,6 +65,7 @@ function populateList(plates = [], platesList) {
 
 }
 
+//Take care of checkboxes
 function toggleDone(e) {
   //event delegation
   if(!e.target.matches('input')) return; //skip this unles it's an input
@@ -70,9 +79,37 @@ function toggleDone(e) {
   populateList(items, itemsList);
 }
 
-  addItems.addEventListener('submit', addItem);
-  itemsList.addEventListener('click', toggleDone);
+
+function toggleButtons (e) {
+  items.forEach(function(item, index, array) {
+  if(e.target.dataset.clear){
+      items.splice(0);
+      localStorage.setItem('items', JSON.stringify(items))
+      populateList(items, itemsList);
+  } else if(e.target.dataset.checkall) {
+    (items[index].done = true); 
+  } else {
+    (items[index].done = false);
+  }
+  console.log(items)
+  localStorage.setItem('items', JSON.stringify(items))
   populateList(items, itemsList);
+});
+}
+
+// Listen for the form submit event
+addItems.addEventListener('submit', addItem);
+
+// Listen to the click on Items List (Responsible Parents - Items/Plates && 
+// Irresponsible Children Checkboxes)
+// Listen to the click on parent because checkboxes are not created yet
+  itemsList.addEventListener('click', toggleDone);
+
+  populateList(items, itemsList);
+
+allButtons.forEach(btn => btn.addEventListener('click', toggleButtons))
+
+  
 </script>
 
 

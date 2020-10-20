@@ -72,6 +72,10 @@ h2 {
   margin-top: 20px;
 }
 
+.act-items {
+  padding: 20px;
+}
+
 .add-items input {
   padding: 10px;
   outline: 0;
